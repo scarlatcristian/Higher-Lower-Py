@@ -45,7 +45,7 @@ def play_game():
         choice = input("Who has more followers? Type 'A' or 'B': ").lower()
         if choice == right_answer:
             score += 1
-            print(f"Correct, you score is {score}\n")
+            print(f"Correct, your score is {score}\n")
         else:
             lives -= 1
 
