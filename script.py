@@ -19,8 +19,9 @@ def play_game():
     score = 0
     lives = 1
     right_answer = ""
+    pick1 = random.choice(personalities)
+
     while lives > 0:
-        pick1 = random.choice(personalities)
         pick2 = random.choice(personalities)
 
         while pick1 == pick2:
@@ -45,11 +46,12 @@ def play_game():
         choice = input("Who has more followers? Type 'A' or 'B': ").lower()
         if choice == right_answer:
             score += 1
-            print(f"Correct, your score is {score}\n")
+            print(f"Correct, your score is: {score}\n")
+            pick1 = pick2
         else:
             lives -= 1
 
-    print(f"Game over, your total score is {score}")
+    print(f"Game over, your total score is: {score}")
 
 
 play_game()
